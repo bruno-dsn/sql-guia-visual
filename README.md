@@ -1,264 +1,188 @@
-# ✈️ SQL no Aeroporto de Dados
+# SQL sem Mistério: Laboratório Visual
 
-> Um guia visual e interativo de SQL para iniciantes, usando um sistema de voos como exemplo prático do mundo real.
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-aplicação-FF4B4B?logo=streamlit&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-banco%20em%20memória-003B57?logo=sqlite&logoColor=white)
+![Testes](https://img.shields.io/badge/testes-pytest-0A9EDC?logo=pytest&logoColor=white)
+![Licença](https://img.shields.io/badge/licença-MIT-0F766E)
 
-<br>
+Aplicação educacional para quem nunca consultou um banco de dados. O usuário
+conhece as tabelas, lê uma pergunta de negócio, modifica a consulta SQL e vê o
+resultado acompanhado de uma explicação em linguagem simples.
 
-<div align="center">
+![Prévia do SQL sem Mistério](assets/preview.png)
 
-### 🚀 [CLIQUE AQUI PARA ACESSAR O GUIA INTERATIVO](https://bruno-dsn.github.io/sql-guia-visual/sql-guia-visual-bruno.html)
+## Problema
 
-</div>
+Materiais introdutórios de SQL frequentemente começam pela sintaxe e pressupõem
+que o aluno já entende tabelas, relacionamentos e o formato de uma consulta. Para
+quem está começando, comandos como `SELECT`, `FROM` e `WHERE` aparecem como
+palavras isoladas, sem conexão visual com os dados.
 
-<br>
+Este laboratório inverte essa ordem:
 
-![SQL Badge](https://img.shields.io/badge/SQL-Guia%20Visual-1a6bdc?style=for-the-badge&logo=postgresql&logoColor=white)
-![Level Badge](https://img.shields.io/badge/Nível-Iniciante-1d9e75?style=for-the-badge)
-![HTML Badge](https://img.shields.io/badge/Formato-HTML%20Interativo-ef9f27?style=for-the-badge&logo=html5&logoColor=white)
-![License Badge](https://img.shields.io/badge/Licença-MIT-7f77dd?style=for-the-badge)
+1. apresenta a tabela de origem;
+2. explica a pergunta que será respondida;
+3. permite editar e executar a consulta;
+4. traduz cada cláusula;
+5. mostra o resultado produzido.
 
-<br>
+## Experiência de aprendizagem
 
-## 📌 Sobre o projeto
+| Etapa | Conceitos | Resultado esperado |
+|---|---|---|
+| 1 | `SELECT`, `FROM`, `LIMIT` | Escolher colunas e controlar a saída |
+| 2 | `WHERE`, `AND` | Filtrar linhas por condições |
+| 3 | `ORDER BY`, `ASC`, `DESC` | Ordenar e priorizar registros |
+| 4 | `COUNT`, `SUM`, `AVG`, `GROUP BY` | Transformar linhas em indicadores |
+| 5 | `JOIN`, `ON`, aliases | Combinar tabelas relacionadas |
+| 6 | `CASE WHEN` | Traduzir regras de negócio em categorias |
+| Prática | Três desafios graduais | Resolver problemas e validar o resultado |
+| Exploração | Playground somente para leitura | Criar consultas próprias com segurança |
 
-Este repositório contém um **guia visual e interativo de SQL**, criado para quem está começando na área de dados e quer entender os comandos mais importantes de forma clara, prática e memorável.
+## Funcionalidades
 
-A ideia surgiu de uma observação simples: a maioria dos materiais de SQL para iniciantes é muito técnica, cheia de jargão e sem contexto do mundo real. Este guia resolve isso usando uma **analogia com um aeroporto** — cada comando SQL é explicado como uma ferramenta que um controlador de tráfego aéreo usaria para gerenciar voos, passageiros e companhias aéreas.
+- seis aulas progressivas, do primeiro `SELECT` ao `CASE WHEN`;
+- visualização da tabela antes da consulta;
+- tradução das cláusulas SQL em português;
+- editor de consultas dentro do Streamlit;
+- desafios corrigidos pelo resultado, não por cópia de código;
+- mapa das quatro tabelas e suas chaves de relacionamento;
+- playground que aceita apenas uma consulta `SELECT` ou `WITH`;
+- bloqueio de comandos que alteram o banco;
+- progresso temporário durante a sessão;
+- interface responsiva em tema escuro.
 
-> **"SQL não é só código. É lógica — e lógica se aprende com bons exemplos."**
+## Cenário dos dados
 
-<br>
+O banco representa uma instituição brasileira fictícia e possui quatro tabelas:
 
-## 🎯 Para quem é este guia?
+| Tabela | Linhas | Conteúdo |
+|---|---:|---|
+| `clientes` | 60 | Localização, perfil de investidor e data de cadastro |
+| `contas` | 80 | Tipo de conta, saldo e status |
+| `ativos` | 12 | Produtos de investimento e setores fictícios |
+| `ordens` | 520 | Compras, vendas, quantidades, preços e status |
 
-| Perfil | Este guia é útil? |
-|--------|-------------------|
-| Nunca usou SQL antes | ✅ Sim, começa aqui |
-| Sabe o básico mas quer fixar os fundamentos | ✅ Sim, ótima revisão |
-| Quer um material de referência rápida | ✅ Sim, use como consulta |
-| Já é desenvolvedor SQL sênior | ⚠️ Talvez muito básico |
+Todos os registros são sintéticos e reproduzíveis por meio de uma semente fixa.
+O projeto não utiliza dados, regras ou sistemas internos da B3 nem de qualquer
+instituição financeira.
 
-<br>
+O dicionário e os relacionamentos estão em
+[docs/modelo_de_dados.md](docs/modelo_de_dados.md).
 
-## 📚 O que você vai aprender
-
-O guia cobre **8 seções completas**, cada uma com exemplos visuais, tabelas de resultado e código comentado:
-
-### 1. `SELECT` — O painel de informações do aeroporto
-Aprenda a escolher quais colunas você quer visualizar. Cobre `SELECT *`, seleção de colunas específicas, uso de `AS` para criar aliases e `SELECT DISTINCT` para eliminar duplicatas.
-
-### 2. `WHERE` — O filtro do controlador de tráfego
-Filtre apenas os registros que atendem a uma condição. Cobre operadores de comparação (`=`, `!=`, `>`, `<`, `>=`), operadores lógicos (`AND`, `OR`, `NOT`), `IN`, `BETWEEN`, `LIKE` e tratamento de `NULL`.
-
-### 3. `JOIN` — Conectando terminais diferentes
-Una informações de duas ou mais tabelas. Cobre `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN` e `FULL OUTER JOIN`, com exemplos visuais mostrando quais linhas são incluídas ou excluídas em cada tipo.
-
-### 4. `GROUP BY` — O relatório por companhia aérea
-Agrupe registros e calcule totais por categoria. Cobre a regra de ouro do GROUP BY, uso de `HAVING` para filtrar grupos e a diferença fundamental entre `WHERE` e `HAVING`.
-
-### 5. `ORDER BY` — A fila de embarque organizada
-Ordene os resultados como quiser. Cobre `ASC`, `DESC`, ordenação por múltiplas colunas e combinação com `LIMIT` para obter os "top N" registros.
-
-### 6. Funções de Agregação — As ferramentas do gestor
-Calcule estatísticas sobre conjuntos de dados com `COUNT()`, `SUM()`, `AVG()`, `MAX()` e `MIN()`. Inclui a diferença entre `COUNT(*)` e `COUNT(coluna)`.
-
-### 7. Subqueries — Uma consulta dentro da outra
-Escreva consultas aninhadas para responder perguntas mais complexas. Cobre subqueries no `WHERE`, subqueries no `FROM` (tabelas derivadas) e quando usar CTEs (`WITH`) no lugar de subqueries.
-
-### 8. Boas Práticas — Como escrever SQL de qualidade
-O que diferencia um analista júnior de um sênior. Cobre formatação e legibilidade, performance, checklist do analista e a **ordem real de execução** do SQL (que é diferente da ordem de escrita!).
-
-<br>
-
-## 🗂️ Estrutura do repositório
-
-```
-sql-guia-visual/
-│
-├── README.md                          ← Você está aqui
-├── sql-guia-visual-bruno.html         ← Guia interativo completo (abra no navegador)
-│
-├── exemplos/                          ← Scripts SQL prontos para rodar
-│   ├── 01_select.sql
-│   ├── 02_where.sql
-│   ├── 03_join.sql
-│   ├── 04_group_by.sql
-│   ├── 05_order_by.sql
-│   ├── 06_funcoes_agregacao.sql
-│   ├── 07_subqueries.sql
-│   └── 08_boas_praticas.sql
-│
-└── dados/
-    └── aeroporto_sample.sql           ← Script para criar e popular as tabelas de exemplo
-```
-
-<br>
-
-## 🚀 Como usar
-
-### Opção 1 — Abrir direto no navegador (mais fácil)
-1. Baixe o arquivo `sql-guia-visual-bruno.html`
-2. Dê dois cliques no arquivo
-3. Ele abrirá no seu navegador — Chrome, Firefox ou Edge funcionam perfeitamente
-4. Navegue pelas abas na parte superior
-
-### Opção 2 — Acessar via GitHub Pages
-Acesse o guia online sem precisar baixar nada:
-
-```
-https://bruno-dsn.github.io/sql-guia-visual/
-```
-
-### Opção 3 — Clonar o repositório
-```bash
-git clone https://github.com/bruno-dsn/sql-guia-visual.git
-cd sql-guia-visual
-# Abra o arquivo HTML no navegador
-open sql-guia-visual-bruno.html       # macOS
-start sql-guia-visual-bruno.html      # Windows
-xdg-open sql-guia-visual-bruno.html  # Linux
-```
-
-### Opção 4 — Praticar com o banco de dados de exemplo
-```bash
-# Com PostgreSQL instalado:
-psql -U seu_usuario -d seu_banco -f dados/aeroporto_sample.sql
-
-# Com MySQL:
-mysql -u seu_usuario -p seu_banco < dados/aeroporto_sample.sql
-
-# Com SQLite:
-sqlite3 aeroporto.db < dados/aeroporto_sample.sql
-```
-
-<br>
-
-## 🗺️ Mapa visual do guia
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    SQL NO AEROPORTO DE DADOS                    │
-├─────────────┬──────────────────────────────────────────────────-┤
-│  SELECT     │  Escolhe quais colunas exibir no painel           │
-│  WHERE      │  Filtra só os voos que atendem a condição         │
-│  JOIN       │  Conecta tabelas de passageiros e voos            │
-│  GROUP BY   │  Agrupa e conta voos por companhia                │
-│  ORDER BY   │  Organiza a fila de embarque por horário          │
-│  Funções    │  Calcula médias, totais e máximos                 │
-│  Subquery   │  Pergunta dentro de pergunta                      │
-│  Práticas   │  Checklist do analista de dados                   │
-└─────────────┴────────────────────────────────────────────────────┘
-```
-
-<br>
-
-## 💡 Por que o tema aeroporto?
-
-A escolha do tema foi intencional. Um aeroporto é um sistema de dados rico e familiar para qualquer pessoa:
-
-- **Tabela `voos`** → registros com destino, horário, status, gate
-- **Tabela `passageiros`** → registros com nome, assento, voo associado
-- **Tabela `companhias`** → registros com nome, código, hub
-
-Isso cria exemplos naturais para todos os comandos: filtrar voos atrasados (`WHERE`), contar voos por companhia (`GROUP BY`), unir passageiro ao seu voo (`JOIN`), listar pelo maior atraso (`ORDER BY DESC`).
-
-<br>
-
-## 🛠️ Tecnologias utilizadas
-
-| Tecnologia | Uso |
-|------------|-----|
-| HTML5 | Estrutura do guia |
-| CSS3 | Estilização, animações e layout responsivo |
-| JavaScript (vanilla) | Navegação entre seções e barra de progresso |
-| Google Fonts | Tipografia (Syne + JetBrains Mono) |
-
-Nenhuma dependência externa. Nenhum framework. Um único arquivo HTML que funciona em qualquer navegador.
-
-<br>
-
-## 📖 Conceitos abordados — referência rápida
+## Exemplo explicado
 
 ```sql
--- SELECT: escolher colunas
-SELECT destino, companhia, hora FROM voos;
-
--- WHERE: filtrar linhas
-SELECT * FROM voos WHERE status = 'Atrasado';
-
--- JOIN: unir tabelas
-SELECT p.nome, v.destino
-FROM passageiros p
-JOIN voos v ON p.voo_id = v.id;
-
--- GROUP BY: agrupar e contar
-SELECT companhia, COUNT(*) AS total_voos
-FROM voos
-GROUP BY companhia;
-
--- ORDER BY: ordenar resultados
-SELECT destino, hora FROM voos ORDER BY hora ASC;
-
--- Funções de agregação
-SELECT COUNT(*), AVG(atraso_min), MAX(atraso_min) FROM voos;
-
--- Subquery
-SELECT destino FROM voos
-WHERE atraso_min > (SELECT AVG(atraso_min) FROM voos);
+SELECT nome, cidade
+FROM clientes
+WHERE uf = 'SP'
+ORDER BY nome;
 ```
 
-<br>
+Leitura em linguagem simples:
 
-## 🔗 Recursos complementares
+- `SELECT nome, cidade`: mostre somente essas duas colunas;
+- `FROM clientes`: busque os dados na tabela de clientes;
+- `WHERE uf = 'SP'`: mantenha apenas as linhas de São Paulo;
+- `ORDER BY nome`: organize o resultado em ordem alfabética.
 
-Quer continuar aprendendo? Aqui estão alguns recursos gratuitos e de qualidade:
+## Como executar
 
-- 📘 [SQLZoo](https://sqlzoo.net) — exercícios interativos no navegador
-- 📘 [Mode SQL Tutorial](https://mode.com/sql-tutorial) — focado em análise de dados
-- 📘 [W3Schools SQL](https://www.w3schools.com/sql) — referência rápida de sintaxe
-- 📘 [LeetCode — Database](https://leetcode.com/problemset/database/) — desafios práticos
-- 📘 [PostgreSQL Documentation](https://www.postgresql.org/docs/) — documentação oficial
+### 1. Crie e ative um ambiente virtual
 
-<br>
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-## 🤝 Contribuindo
+### 2. Instale as dependências
 
-Encontrou um erro? Tem uma sugestão de melhoria? Quer adicionar um novo exemplo?
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
 
-1. Faça um fork do repositório
-2. Crie uma branch: `git checkout -b feature/minha-melhoria`
-3. Commit suas mudanças: `git commit -m 'Adiciona exemplo de CTE'`
-4. Push para a branch: `git push origin feature/minha-melhoria`
-5. Abra um Pull Request
+### 3. Inicie a aplicação
 
-Toda contribuição é bem-vinda! ⭐
+```bash
+python -m streamlit run app.py
+```
 
-<br>
+Abra `http://localhost:8501` caso o navegador não seja iniciado automaticamente.
 
-## 📄 Licença
+## Testes
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Instale as dependências de desenvolvimento e execute:
 
-Você pode usar, copiar, modificar e distribuir este material livremente — desde que mantenha os créditos.
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
 
-<br>
+Os testes verificam:
 
-## 👤 Autor
+- carregamento e relacionamento das tabelas;
+- execução de todas as consultas das aulas;
+- execução das soluções dos desafios;
+- tradução das cláusulas na ordem da consulta;
+- bloqueio de comandos de escrita e múltiplas instruções;
+- comparação dos resultados usados na correção.
 
-**Bruno da Silva Nunes**
-Analista de Dados · 2026
+## Estrutura do repositório
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Bruno%20da%20Silva%20Nunes-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-dsnunes/)
-[![GitHub](https://img.shields.io/badge/GitHub-bruno--dsn-181717?style=flat&logo=github&logoColor=white)](https://github.com/bruno-dsn)
+```text
+sql-guia-visual/
+├── .streamlit/
+│   └── config.toml
+├── assets/
+│   └── preview.png
+├── data/
+│   ├── ativos.csv
+│   ├── clientes.csv
+│   ├── contas.csv
+│   └── ordens.csv
+├── docs/
+│   ├── decisoes_do_projeto.md
+│   └── modelo_de_dados.md
+├── scripts/
+│   ├── gerar_dados.py
+│   └── gerar_visualizacoes.py
+├── src/
+│   ├── content.py
+│   ├── database.py
+│   ├── explainer.py
+│   └── validation.py
+├── tests/
+│   ├── test_database.py
+│   ├── test_learning.py
+│   └── test_validation.py
+├── app.py
+├── requirements-dev.txt
+└── requirements.txt
+```
 
-<br>
+## Decisões técnicas
 
----
+- **SQLite em memória:** dispensa servidor e credenciais;
+- **CSV versionado:** permite inspecionar e reproduzir os dados;
+- **pandas:** apresenta resultados em tabelas legíveis;
+- **validação de leitura:** impede alterações acidentais;
+- **conteúdo separado do app:** facilita adicionar novas aulas;
+- **pytest:** protege consultas, dados e regras de segurança.
 
-<div align="center">
+As escolhas e limitações são detalhadas em
+[docs/decisoes_do_projeto.md](docs/decisoes_do_projeto.md).
 
-**Se este guia te ajudou, deixa uma ⭐ no repositório!**
+## Limitações
 
-*Feito com ☕ e muito SQL por Bruno da Silva Nunes*
+O projeto ensina consultas e análise. Criação de tabelas, inserção, atualização,
+exclusão, permissões, índices e administração de servidores não fazem parte da
+primeira versão. O dialeto utilizado é SQLite, portanto algumas funções podem
+ter sintaxe diferente em PostgreSQL, SQL Server, MySQL ou BigQuery.
 
-</div>
+## Autor
+
+**Bruno Nunes**
+
+Ciência de Dados e Inteligência Artificial aplicada a problemas de negócio.

@@ -1,0 +1,61 @@
+cliente_id,nome,cidade,uf,perfil_investidor,data_cadastro
+1,Mariana Costa,São Paulo,SP,Moderado,2023-05-26
+2,Daniel Dias,Salvador,BA,Conservador,2025-01-30
+3,Bruno Silva,Uberlândia,MG,Conservador,2022-07-20
+4,Clara Lima,Londrina,PR,Moderado,2025-03-04
+5,Clara Santos,Uberlândia,MG,Conservador,2025-04-30
+6,Eduarda Almeida,Recife,PE,Arrojado,2025-12-09
+7,Igor Moreira,Niterói,RJ,Conservador,2023-11-30
+8,Caio Cardoso,Uberlândia,MG,Conservador,2023-12-15
+9,Lucas Martins,Recife,PE,Conservador,2024-08-07
+10,Larissa Costa,Uberlândia,MG,Conservador,2023-09-02
+11,Roberto Souza,Brasília,DF,Conservador,2023-02-07
+12,Nathalia Cardoso,São Paulo,SP,Moderado,2023-08-25
+13,Bruno Lima,Brasília,DF,Conservador,2023-08-02
+14,Isabela Nascimento,Santos,SP,Conservador,2023-03-15
+15,Marcos Martins,Salvador,BA,Arrojado,2025-08-29
+16,Bruno Souza,Florianópolis,SC,Conservador,2026-02-11
+17,Daniel Ferreira,Curitiba,PR,Conservador,2025-08-12
+18,Nathalia Santos,Rio de Janeiro,RJ,Moderado,2022-05-04
+19,Daniel Barbosa,Recife,PE,Conservador,2023-07-12
+20,Bruno Gomes,Porto Alegre,RS,Arrojado,2023-10-16
+21,Clara Rocha,Uberlândia,MG,Arrojado,2025-08-18
+22,Isabela Dias,Niterói,RJ,Conservador,2025-03-04
+23,Larissa Martins,Salvador,BA,Moderado,2025-04-19
+24,Helena Nascimento,Rio de Janeiro,RJ,Arrojado,2022-10-20
+25,Juliana Rocha,Campinas,SP,Moderado,2022-08-22
+26,Camila Ferreira,Recife,PE,Moderado,2025-05-15
+27,Bruno Oliveira,Uberlândia,MG,Moderado,2024-08-25
+28,Juliana Martins,Londrina,PR,Arrojado,2022-02-02
+29,Marcos Costa,Florianópolis,SC,Arrojado,2023-07-10
+30,Rafael Moreira,Campinas,SP,Conservador,2022-11-29
+31,Isabela Almeida,Salvador,BA,Arrojado,2023-07-03
+32,Juliana Ferreira,Londrina,PR,Arrojado,2025-07-13
+33,Felipe Rodrigues,Porto Alegre,RS,Conservador,2024-02-14
+34,Rafael Ferreira,Londrina,PR,Arrojado,2024-12-31
+35,Vitória Almeida,Porto Alegre,RS,Conservador,2022-02-18
+36,Caio Nascimento,Brasília,DF,Arrojado,2023-05-15
+37,Beatriz Lima,Porto Alegre,RS,Arrojado,2022-07-04
+38,Paulo Rocha,Brasília,DF,Conservador,2025-01-04
+39,Rafael Dias,Santos,SP,Moderado,2025-02-08
+40,Carlos Martins,Londrina,PR,Arrojado,2024-05-25
+41,Rafael Gomes,Salvador,BA,Conservador,2025-10-16
+42,Mariana Nascimento,Curitiba,PR,Arrojado,2024-07-22
+43,Caio Lima,Rio de Janeiro,RJ,Conservador,2022-02-22
+44,Leonardo Santos,Rio de Janeiro,RJ,Moderado,2022-01-24
+45,Bruno Barbosa,Rio de Janeiro,RJ,Conservador,2022-03-15
+46,Sofia Moreira,Campinas,SP,Moderado,2023-08-03
+47,Marcos Rocha,Rio de Janeiro,RJ,Moderado,2026-01-30
+48,Vitória Silva,Porto Alegre,RS,Moderado,2024-09-04
+49,Renata Pereira,Rio de Janeiro,RJ,Conservador,2025-09-20
+50,Igor Nascimento,Uberlândia,MG,Moderado,2026-02-11
+51,Beatriz Costa,São Paulo,SP,Moderado,2023-12-05
+52,Renata Costa,Rio de Janeiro,RJ,Conservador,2025-01-12
+53,Igor Ferreira,Niterói,RJ,Moderado,2022-06-13
+54,Isabela Santos,Campinas,SP,Conservador,2025-01-21
+55,Roberto Almeida,Campinas,SP,Arrojado,2023-05-09
+56,Carlos Pereira,Curitiba,PR,Moderado,2024-04-10
+57,Thiago Barbosa,Santos,SP,Conservador,2024-03-19
+58,Eduarda Ramos,Niterói,RJ,Moderado,2026-02-14
+59,Renata Santos,Florianópolis,SC,Moderado,2022-11-23
+60,Clara Mendes,Rio de Janeiro,RJ,Arrojado,2025-04-10

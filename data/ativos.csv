@@ -1,0 +1,13 @@
+ativo_id,ticker,nome_ativo,tipo_ativo,setor
+1,LABA3,Laboratórios Aurora,Ação,Saúde
+2,SOLR3,Energia Solar Sul,Ação,Energia
+3,HORA4,Banco Horizonte,Ação,Financeiro
+4,VIVA3,Viva Varejo,Ação,Consumo
+5,TECA3,Tecnologia Atlântico,Ação,Tecnologia
+6,MOBI3,Mobilidade Brasil,Ação,Transportes
+7,FLOG11,Fundo Logística Central,FII,Logística
+8,FCOM11,Fundo Comercial Urbano,FII,Imobiliário
+9,FCRI11,Fundo Recebíveis Brasil,FII,Recebíveis
+10,RFIX1,Renda Fixa Curta,Renda fixa,Pós-fixado
+11,IPCA1,Tesouro Inflação,Renda fixa,Inflação
+12,DOLA1,Fundo Cambial,Fundo,Câmbio
