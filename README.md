@@ -1,3 +1,5 @@
+[![Python checks](https://github.com/bruno-dsn/sql-guia-visual/actions/workflows/tests.yml/badge.svg)](https://github.com/bruno-dsn/sql-guia-visual/actions/workflows/tests.yml)
+
 # SQL sem Mistério: Laboratório Visual
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
@@ -186,3 +188,13 @@ ter sintaxe diferente em PostgreSQL, SQL Server, MySQL ou BigQuery.
 **Bruno Nunes**
 
 Ciência de Dados e Inteligência Artificial aplicada a problemas de negócio.
+
+
+## Verificação automatizada
+
+O workflow [Python checks](.github/workflows/tests.yml) instala as dependências de desenvolvimento e executa a suíte de testes em Python 3.12 a cada push ou pull request. O badge acima mostra o resultado real da execução, sem um número fixo de testes.
+
+
+## Qualidade dos dados e limites de execução
+
+A validação distingue literais e comentários de comandos SQL. A execução adiciona um autorizador SQLite para leitura, limite de operações, de linhas retornadas e de tamanho de célula. Esses controles são para o banco em memória do laboratório; não equivalem a isolamento de processos nem a um serviço público preparado para cargas hostis.
