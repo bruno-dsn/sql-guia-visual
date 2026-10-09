@@ -1,18 +1,20 @@
-[![Python checks](https://github.com/bruno-dsn/sql-guia-visual/actions/workflows/tests.yml/badge.svg)](https://github.com/bruno-dsn/sql-guia-visual/actions/workflows/tests.yml)
+# SQL sem Mistério
 
-# SQL sem Mistério: Laboratório Visual
+![SQL sem Mistério](assets/portfolio-cover.svg)
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-aplicação-FF4B4B?logo=streamlit&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-banco%20em%20memória-003B57?logo=sqlite&logoColor=white)
-![Testes](https://img.shields.io/badge/testes-pytest-0A9EDC?logo=pytest&logoColor=white)
-![Licença](https://img.shields.io/badge/licença-MIT-0F766E)
+Aprenda SQL a partir de uma pergunta e de tabelas visíveis. Edite consultas, leia a explicação de cada cláusula e resolva desafios em um banco fictício de investimentos, somente para leitura.
 
-Aplicação educacional para quem nunca consultou um banco de dados. O usuário
-conhece as tabelas, lê uma pergunta de negócio, modifica a consulta SQL e vê o
-resultado acompanhado de uma explicação em linguagem simples.
+[Como executar](#como-executar) · [Dados e método](docs/modelo_de_dados.md) · [Testes](tests/) · [Histórico](https://github.com/bruno-dsn/sql-guia-visual/commits/main)
 
-![Prévia do SQL sem Mistério](assets/preview.png)
+[![Verificações Python](https://github.com/bruno-dsn/sql-guia-visual/actions/workflows/tests.yml/badge.svg)](https://github.com/bruno-dsn/sql-guia-visual/actions/workflows/tests.yml) · [Licença MIT](LICENSE)
+
+## Veja a aplicação
+
+![Captura real da interface revisada](assets/interface-desktop.png)
+
+Captura da aplicação executada localmente com os dados de demonstração. A fonte dos dados, os filtros e as hipóteses permanecem visíveis no painel.
+
+**Primeira exploração:** Conheça as tabelas; faça a primeira consulta; resolva um desafio e compare seu resultado.
 
 ## Problema
 
